@@ -1,0 +1,34 @@
+<% if pencil_signed_in? %>
+<div style="width:90%;margin:0 auto;">
+<% @users.each do |user| %>
+<hr color="#09A6E1" size=3>
+<h1 align= "center" id="logo1"><%= user.nombre %></h1>
+<div>
+<P align="center">
+<%= user.profesion %>
+</P>
+</div>
+<div>
+<P align="center">
+<%= user.telefono %>
+</P>
+</div>
+<div>
+<P align="center">
+<%= user.correo %>
+</P>
+</div>
+<div>
+<P align="center">
+<%= user.skype %>
+</P>
+</div>
+<hr color="#09A6E1" size=3>
+<%end%>
+</div>
+<%else%>
+<br><br><br><br><br><br>
+<hr>
+<h1 align= "center" id="logo1">Por favor inicie Sesión o Cree una Cuenta <br> para poder ver sus contactos</h1>
+<hr>
+<%end%>

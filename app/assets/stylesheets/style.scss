@@ -1,0 +1,50 @@
+html,body{
+	margin: 0px;
+	font-family: 'Muli', sans-serif;
+}
+a:visited{
+	color: inherit;
+}
+.btn{
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 1.2em;
+}
+#logo{
+	font-size: 1.2em;
+}
+#logo1{
+	font-size: 2.2em;
+}
+.no-margin{
+	margin:  0px;
+}
+.be-red{
+	background-color: #09A6E0;
+}
+.white{
+	color: #F3F3F3;
+}
+.large-padding{
+	padding: 5px 2px;
+}
+.field{
+	margin-top: 1em; 
+}
+.form-control{
+	border: none;
+	border-bottom: 1px solid;
+	outline: none;
+	width: 100%;
+	display: block;
+	padding: 10px 0px;
+	font-size: 1.2em;
+}
+.btn{
+	border: 1em;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}

@@ -1,0 +1,31 @@
+<% if pencil_signed_in? %>
+<div style="width:80%;margin:0 auto;">
+
+<h1>Crear Nuevo Contacto</h1>
+<%= form_for(@user) do |f| %>
+<div class="field">
+	<%= f.text_field :nombre, placeholder: "Nombre", class:"form-control" %>
+</div>
+<div class="field">
+	<%= f.text_field :profesion, placeholder: "Profesion", class:"form-control" %>
+</div>
+<div class="field">
+	<%= f.text_field :telefono, placeholder: "Telefono", class:"form-control" %>
+</div>
+<div class="field">
+	<%= f.text_field :correo, placeholder: "correo", class:"form-control" %>
+</div>
+<div class="field">
+	<%= f.text_field :skype, placeholder: "Skype", class:"form-control" %>
+</div>
+	<div class="field">
+    <%= f.submit "Guardar", class:"btn be-red white"%>
+	</div>
+</div>
+<%end%>
+<%else%>
+<br><br><br><br><br><br>
+<hr>
+<h1 align= "center" id="logo1">Por favor inicie Sesión o Cree una Cuenta <br> para poder ver sus contactos</h1>
+<hr>
+<%end%>

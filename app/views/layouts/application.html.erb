@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Directorio Telefonico</title>
+  <link href='https://fonts.googleapis.com/css?family=Muli:400,400italic' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+ <nav class="be-red white large-padding middle-xs">
+		<ul class="no-list row center-xs">
+		<li class="col-md">
+		<h1 class="no-margin" id="logo">Directorio</h1>
+		</li>
+		<li class="col-md">
+         <%= link_to "Contactos", root_path%>
+		</li>
+		<li class="col-md">
+		<%= link_to "Nuevo Contacto","users/new",method: :get%>
+		</li>
+		<% if pencil_signed_in? %>
+		    <li class="col-md">
+		    <%= link_to "Cerrar Sesión", destroy_pencil_session_path, method: :delete %>
+		    </li>
+		<%else%>
+		    <li class="col-md">
+		    <%= link_to "Iniciar Sesión", new_pencil_session_path%>
+		    </li>
+		    <li class="col-md">
+		    <%= link_to "Crear Cuenta", new_pencil_registration_path%>
+		    </li>
+		<%end%>
+		</ul>
+	</nav>
+</header>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+
+<%= yield %>
+
+</body>
+</html>
